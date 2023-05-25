@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --main-BG: hsl(217, 54%, 11%);
+    --card-BG: hsl(216, 50%, 16%);
+    --blue-line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+}
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-size: 18px;
+    background-color: var(--main-BG);
+    font-family: 'Outfit', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: antiquewhite;
+}
+
+.attribution a {
+    color: hsl(229, 94%, 74%);
+}
+
+.card {
+    width: 360px;
+    background-color: var(--card-BG);
+    padding: 1.2rem;
+    border-radius: .75rem;
+}
+
+.image {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.image div {
+    position: absolute;
+    top: 0;
+    background-color: hsl(178, 100%, 50%, 60%);
+    width: 100%;
+    height: calc(100% - 4px);
+    z-index: 999;
+    opacity: 0;
+    border-radius: .5rem;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.image div:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.image div img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.image .main-img {
+    width: 100%;
+    height: 100%;
+    border-radius: .5rem;
+}
+
+.info h4 {
+    color: var(--white);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.info h4:hover {
+    color: var(--cyan);
+    cursor: pointer;
+}
+
+.info p {
+    color: var(--soft-blue);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.extra {
+    font-size: .8rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+
+    .one {
+        display: inline-flex;
+        align-items: center;
+        gap: .3rem;
+        color: var(--cyan);
+    }
+
+    .two {
+        display: inline-flex;
+        align-items: center;
+        gap: .3rem;
+        color: var(--soft-blue);
+    }
+}
+
+.hori-line {
+    height: .1rem;
+    background-color: var(--blue-line);
+    margin-top: 1rem;
+    margin-bottom: 1.3rem;
+}
+
+.creator {
+    display: flex;
+    align-items: center;
+    font-size: .9rem;
+    color: var(--soft-blue);
+}
+
+.avatar {
+    width: 1.8rem;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-right: .5rem;
+}
+
+.creator span {
+    color: var(--white);
+    margin: .3rem;
+}
+
+.creator span:hover {
+    color: var(--cyan);
+    cursor: pointer;
+}
